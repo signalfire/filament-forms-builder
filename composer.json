@@ -1,0 +1,50 @@
+{
+    "name": "signalfire/filament-forms-builder",
+    "description": "A FilamentPHP plugin for creating and managing custom contact forms from the admin panel",
+    "type": "library",
+    "license": "MIT",
+    "version": "0.0.1",
+    "authors": [
+        {
+            "name": "signalfire",
+            "email": "hello@signalfire.co.uk"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "filament/filament": "^3.0",
+        "illuminate/contracts": "^10.0|^11.0|^12.0",
+        "illuminate/database": "^10.0|^11.0|^12.0",
+        "illuminate/support": "^10.0|^11.0|^12.0",
+        "illuminate/validation": "^10.0|^11.0|^12.0",
+        "livewire/livewire": "^3.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "phpunit/phpunit": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Signalfire\\FilamentFormsBuilder\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Signalfire\\FilamentFormsBuilder\\Tests\\": "tests/",
+            "Signalfire\\FilamentFormsBuilder\\Database\\Factories\\": "database/factories/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Signalfire\\FilamentFormsBuilder\\FilamentFormsBuilderServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    }
+}
